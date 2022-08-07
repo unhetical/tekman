@@ -164,7 +164,7 @@ import { ConfirmationService, FilterService } from 'primeng/api';
     SessionService,
     FilterService,
     ConfirmationService,
-    UserService
+    UserService,
   ],
   bootstrap: [AppComponent],
 })

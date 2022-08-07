@@ -1,0 +1,35 @@
+::ng-deep {
+  .p-card {
+    border-radius: 10px;
+    & .p-card-content {
+      padding: 0px;
+    }
+  }
+
+  .card-syllabus .p-card {
+    width: fit-content;
+    & .p-card-content {
+      display: flex;
+    }
+  }
+}
+
+.font {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3b3b3b;
+}
+
+.card-syllabus {
+  &-title {
+    @extend .font;
+  }
+  &-subtitle {
+    @extend .font;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

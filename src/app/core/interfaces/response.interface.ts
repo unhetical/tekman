@@ -1,6 +1,10 @@
 export interface Response {
   data: any[];
-  meta?: { error: any };
+  meta?: { error: string };
+}
+
+export interface Meta {
+  error: string;
 }
 
 export interface Options {

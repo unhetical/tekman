@@ -1,50 +1,19 @@
 // Prime
 
-::ng-deep {
-  .p-card {
-    border-radius: 10px;
-    & .p-card-content {
-      padding: 0px;
-    }
-  }
-
-  .card-syllabus .p-card {
-    width: fit-content;
-    & .p-card-content {
-      display: flex;
-    }
-  }
-
-  .card-last-session .p-card .p-card-body {
-    padding: 1.5rem;
-  }
-
-  .p-button {
-    background: #f26c48;
-    border: 1px solid #f26c48;
-
-    &.p-button-outlined {
-      color: #f26c48;
-    }
-
-    &.p-button-rounded.check {
-      background-color: #ed993f;
-      border: none;
-    }
-  }
-
-  .p-button:enabled:hover {
-    background: #e7552c;
-    border: 1px solid #e7552c;
-  }
-
-  .p-button.p-button-outlined:enabled:hover {
-    background: rgba(236, 139, 60, 0.178);
-    color: #e7552c;
-  }
+:host ::ng-deep.p-button.p-button-lg {
+  width: 213px;
+  height: 50px;
 }
 
 // Custom
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
 .font {
   font-family: "Roboto";
@@ -63,26 +32,48 @@
       font-size: 24px;
     }
   }
+}
 
-  .card-syllabus {
-    &-title {
-      @extend .font;
-    }
-    &-subtitle {
-      @extend .font;
-      font-weight: 400;
-      font-size: 16px;
-    }
+.bf-starting {
+  background-color: white;
+  &-title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: -0.0956522px;
+    color: #3b3b3b;
+    margin-bottom: 115px;
   }
 
-  .card-last-session {
-    &-title {
-      @extend .font;
-      font-family: "Poppins";
+  &-step {
+    @extend .flex-column-center;
+    min-width: 200px;
+
+    &-icon {
+      @extend .flex-column-center;
+      width: 105px;
+      height: 105px;
+      background: #f2f2f2;
+      border-radius: 20px;
+      margin-bottom: 50px;
+
+      .pi {
+        font-size: 3.1rem;
+        color: #00aea4;
+      }
     }
-    &-subtitle {
-      @extend .font;
+    &-text {
+      font-family: "Roboto";
+      font-style: normal;
       font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      color: #3b3b3b;
+      max-width: 260px;
     }
   }
 }

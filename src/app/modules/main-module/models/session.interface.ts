@@ -25,7 +25,3 @@ export interface LessonDto {
   trimester: number;
   completed: boolean;
 }
-
-export interface Meta {
-  error: string;
-}

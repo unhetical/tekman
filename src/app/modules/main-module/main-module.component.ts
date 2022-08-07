@@ -18,6 +18,8 @@ export class MainModuleComponent implements OnInit {
   lastLesson: Lesson;
   chartData: any;
 
+  visibleSidebar: boolean;
+
   constructor(
     private sessionService: SessionService,
     public dialogService: DialogService
@@ -74,19 +76,27 @@ export class MainModuleComponent implements OnInit {
     });
   }
 
-  playLesson(ev: Event) {
-    // Continuar sesión, mostrar página before-starting.
+  playLesson(ev: Event): void {
+    // Continuar sesión.
+    this.visibleSidebar = false;
+    console.log('Reproduciendo pase', ev);
   }
 
-  randomLesson(ev: Event) {
+  randomLesson(ev: Event): void {
     // Cambiar de sesión aleatoriamente dentro del mismo trimestre.
     // Avisar a backend del cambio de sesión.
     // Mostrar página before-starting.
+    console.log('random', ev);
   }
 
-  nextLesson(ev: Event) {
+  nextLesson(ev: Event): void {
     // saltar a la siguiente sesión
     // Si hay mas en el mismo trimestre, pedir el siguiente.
     // Si no hay más ¿mostrar siguiente trimestre o mensaje de aviso?
+    console.log('next', ev);
+  }
+
+  toggleSidebar(ev: boolean): void {
+    this.visibleSidebar = ev;
   }
 }
