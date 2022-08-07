@@ -1,0 +1,88 @@
+// Prime
+
+::ng-deep {
+  .p-card {
+    border-radius: 10px;
+    & .p-card-content {
+      padding: 0px;
+    }
+  }
+
+  .card-syllabus .p-card {
+    width: fit-content;
+    & .p-card-content {
+      display: flex;
+    }
+  }
+
+  .card-last-session .p-card .p-card-body {
+    padding: 1.5rem;
+  }
+
+  .p-button {
+    background: #f26c48;
+    border: 1px solid #f26c48;
+
+    &.p-button-outlined {
+      color: #f26c48;
+    }
+
+    &.p-button-rounded.check {
+      background-color: #ed993f;
+      border: none;
+    }
+  }
+
+  .p-button:enabled:hover {
+    background: #e7552c;
+    border: 1px solid #e7552c;
+  }
+
+  .p-button.p-button-outlined:enabled:hover {
+    background: rgba(236, 139, 60, 0.178);
+    color: #e7552c;
+  }
+}
+
+// Custom
+
+.font {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3b3b3b;
+}
+
+.main-module {
+  .syllabus {
+    &-title {
+      @extend .font;
+      font-family: "Poppins";
+      font-size: 24px;
+    }
+  }
+
+  .card-syllabus {
+    &-title {
+      @extend .font;
+    }
+    &-subtitle {
+      @extend .font;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  .card-last-session {
+    &-title {
+      @extend .font;
+      font-family: "Poppins";
+    }
+    &-subtitle {
+      @extend .font;
+      font-weight: 400;
+    }
+  }
+}

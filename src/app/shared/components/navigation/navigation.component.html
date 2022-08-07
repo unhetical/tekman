@@ -1,0 +1,92 @@
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <h1 class="p-toolbar-title">Tarjetas</h1>
+  </div>
+
+  <div class="p-toolbar-group-right">
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-ellipsis-v"
+      class="p-button-rounded p-button-text p-shadow-2 bg-white mx-2"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-cog"
+      class="p-button-rounded p-button-text p-shadow-2 bg-white mx-2"
+      (click)="openConfigModal($event)"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-sign-out"
+      class="p-button-rounded p-button-text p-shadow-2 bg-white mx-2"
+    ></button>
+  </div>
+</p-toolbar>
+
+<!-- Configuration Sidebar -->
+<p-sidebar
+  [(visible)]="visibleSidebar"
+  position="right"
+  [baseZIndex]="10000"
+  styleClass="p-sidebar-md"
+  [showCloseIcon]="false"
+>
+  <!-- header -->
+  <div class="d-flex align-items-center">
+    <i
+      class="pi pi-arrow-left"
+      style="font-size: 1.2rem; color: #4f4f4f; cursor: pointer"
+      (click)="closeWithoutSave()"
+    ></i>
+    <h1 class="sidebar-title">Configuración</h1>
+  </div>
+
+  <!-- form -->
+  <form
+    *ngIf="formGroup"
+    [formGroup]="formGroup"
+    class="d-flex flex-column row p-5"
+    style="height: 84vh"
+  >
+    <div class="d-flex flex-column align-items-center pb-4">
+      <div style="width: 330px">
+        <h5 class="mb-0" style="color: #adafb4; font-size: 14px">Idioma</h5>
+        <p-dropdown
+          [options]="languages"
+          optionLabel="name"
+          optionValue="code"
+          formControlName="language"
+          styleClass="w-100"
+        ></p-dropdown>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center pt-2">
+      <div style="width: 330px">
+        <h5 class="mb-0" style="color: #adafb4; font-size: 14px">Cursos</h5>
+        <p-dropdown
+          [options]="courses"
+          optionLabel="name"
+          optionValue="code"
+          formControlName="course"
+          styleClass="w-100"
+        ></p-dropdown>
+      </div>
+    </div>
+  </form>
+
+  <!-- footer -->
+  <footer class="d-flex flex-column align-items-center justify-content-center footer">
+    <p-button label="Guardar cambios" (click)="saveConfig($event)" class="btn-save" style="width: 300px" styleClass="w-100 p-button-lg"></p-button>
+
+    <div class="pt-4 btn-cancel" (click)="closeWithoutSave()">
+      Cerrar sin guardar
+    </div>
+  </footer>
+</p-sidebar>

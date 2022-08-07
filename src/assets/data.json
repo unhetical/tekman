@@ -1,0 +1,208 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "1º Trimestre",
+      "completed": true,
+      "lessons": [
+        {
+          "id": 1,
+          "name": "Session 1",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 2,
+          "name": "Session 2",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 3,
+          "name": "Session 3",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 4,
+          "name": "Session 4",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 5,
+          "name": "Session 5",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 6,
+          "name": "Session 6",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 7,
+          "name": "Session 7",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 8,
+          "name": "Session 8",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 9,
+          "name": "Session 9",
+          "trimester": 1,
+          "completed": true
+        },
+        {
+          "id": 10,
+          "name": "Session 10",
+          "trimester": 1,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "2º Trimestre",
+      "completed": false,
+      "lessons": [
+        {
+          "id": 20,
+          "name": "Session 20",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 21,
+          "name": "Session 21",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 22,
+          "name": "Session 22",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 23,
+          "name": "Session 23",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 24,
+          "name": "Session 24",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 25,
+          "name": "Session 25",
+          "trimester": 2,
+          "completed": true
+        },
+        {
+          "id": 26,
+          "name": "Session 26",
+          "trimester": 2,
+          "completed": false
+        },
+        {
+          "id": 27,
+          "name": "Session 27",
+          "trimester": 2,
+          "completed": false
+        },
+        {
+          "id": 28,
+          "name": "Session 28",
+          "trimester": 2,
+          "completed": false
+        },
+        {
+          "id": 29,
+          "name": "Session 29",
+          "trimester": 2,
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "3º Trimestre",
+      "completed": false,
+      "lessons": [
+        {
+          "id": 30,
+          "name": "Sesión 30",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 31,
+          "name": "Sesión 31",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 32,
+          "name": "Sesión 32",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 33,
+          "name": "Sesión 33",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 34,
+          "name": "Sesión 34",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 35,
+          "name": "Sesión 35",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 36,
+          "name": "Sesión 36",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 37,
+          "name": "Sesión 37",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 38,
+          "name": "Sesión 38",
+          "trimester": 3,
+          "completed": false
+        },
+        {
+          "id": 39,
+          "name": "Sesión 39",
+          "trimester": 3,
+          "completed": false
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "error": null
+  }
+}

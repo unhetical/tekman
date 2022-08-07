@@ -1,0 +1,57 @@
+/* ===== COLORS ===== */
+
+// Nav
+$back: #051321;
+$dark-gray: #333333;
+$light-gray: #4f4d4d;
+$light-green: #56cc15;
+$white: #ffffff;
+$black: #000000;
+// Pills
+$pastel-red: #e94545;
+$pastel-green: #68ba60;
+$pastel-blue: #4d94ff;
+// Calendar
+$vacancy: rgb(21, 158, 39);
+$personal: rgb(227, 188, 8);
+$local: rgb(40, 63, 227);
+$holidays: rgb(178, 11, 37);
+$selected: rgb(255, 41, 83);
+// Table status flags
+$flag-pastel-red: #ffcdd2;
+$flag-red: #c63737;
+$flag-pastel-green: #c8e6c9;
+$flag-green: #256029;
+
+$colors: (
+  "back": $back,
+  "light-gray": $light-gray,
+  "light-green": $light-green,
+  "white": $white,
+  "black": $black,
+  "pastel-red": $pastel-red,
+  "pastel-green": $pastel-green,
+  "pastel-blue": $pastel-blue,
+  "vacancy": $vacancy,
+  "personal": $personal,
+  "local": $local,
+  "holidays": $holidays,
+  "selected": $selected,
+  "dark-gray": $dark-gray,
+  "flag-pastel-red": $flag-pastel-red,
+  "flag-red": $flag-red,
+  "flag-pastel-green": $flag-pastel-green,
+  "flag-green": $flag-green,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color !important;
+  }
+}

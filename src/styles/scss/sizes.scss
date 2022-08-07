@@ -1,0 +1,15 @@
+/* ===== FONT SIZES ===== */
+$font-sizes: (
+  "xs": 0.8em,
+  "sm": 0.9em,
+  "md": 1em,
+  "ml": 1.2em,
+  "lg": 1.4em,
+  "xl": 1.5em,
+);
+
+@each $name, $size in $font-sizes {
+  .font-#{$name} {
+    font-size: $size !important;
+  }
+}

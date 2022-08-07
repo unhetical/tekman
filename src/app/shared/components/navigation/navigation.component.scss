@@ -1,0 +1,58 @@
+:host ::ng-deep.p-toolbar {
+  background-color: #00aea4;
+  padding: 1rem 2rem;
+
+  .p-toolbar-title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -0.0956522px;
+    color: #ffffff;
+  }
+}
+
+:host ::ng-deep.p-sidebar-content{
+  height: 100%;
+}
+
+:host ::ng-deep.p-button.p-button-lg {
+  width: 300px;
+  height: 50px;
+}
+
+
+.sidebar-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.0956522px;
+  color: #3b3b3b;
+  width: 100%;
+}
+
+.btn-cancel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  text-decoration-line: underline;
+  color: #3b3b3b;
+  cursor: pointer;
+}
+
+.footer{
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+

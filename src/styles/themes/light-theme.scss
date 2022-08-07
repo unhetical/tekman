@@ -1,0 +1,147 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "colors";
+@import "sizes";
+
+
+/* ========== CUSTOM ==========*/
+.btn:focus {
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.ellipsis {
+  width: calc(100% - 1px);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input[type="search"] {
+  border-radius: 20px;
+  border: none;
+  padding: 0.429em 1em;
+  &:hover {
+    border: none;
+  }
+  &:enabled:focus {
+    box-shadow: 0 0 0 0.1rem #d9d9d9;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.custom-badge {
+  border-radius: 2px;
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.badge-pill-active {
+  box-shadow: 0 1px 6px $dark-gray;
+}
+
+/* ========== PRIME ========== */
+.p-button:focus {
+  box-shadow: none;
+}
+
+.p-link:focus {
+  box-shadow: none;
+}
+
+.p-autocomplete .p-autocomplete-input {
+  padding: 0.8em !important;
+}
+
+.p-tooltip.p-tooltip-right,
+.p-tooltip.p-tooltip-left,
+.p-tooltip.p-tooltip-top,
+.p-tooltip.p-tooltip-bottom {
+  min-width: min-content;
+}
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+  font-weight: normal;
+  padding: 0.571em 1em;
+}
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link .p-menuitem-text {
+  margin-right: 0.5em;
+}
+
+.pi {
+  font-size: 1.25em;
+}
+
+.p-paginator {
+  background: white;
+  min-height: 48px;
+  border: none;
+  & .p-paginator-pages .p-paginator-page {
+    border-radius: 50%;
+    &.p-paginator-page.p-highlight {
+      background: none;
+      color: #848484;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 1px;
+    }
+  }
+
+  & .p-dropdown .p-dropdown-label {
+    color: #848484 !important;
+  }
+}
+
+.p-dialog-header {
+  border-bottom: none !important;
+  background: white !important;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  border-radius: 20px;
+}
+
+.p-scrolltop {
+  width: 2rem;
+  height: 2rem;
+}
+
+.p-dataview .p-dataview-header,
+.p-datatable .p-datatable-header {
+  border: none;
+  .p-multiselect-label {
+    color: #666666;
+    padding: 0.5em 1em;
+  }
+}
+
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td {
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  color: gray;
+}
+
+.form-control:disabled,
+.form-control[readonly],
+.p-disabled,
+.p-component:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.p-dropdown,
+.p-inputtext {
+  border: 1px solid #ced4da;
+}
