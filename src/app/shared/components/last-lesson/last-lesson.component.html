@@ -1,5 +1,5 @@
 <div class="card-last-lesson">
-  <p-card>
+  <p-card *ngIf="lastLesson">
     <h3 class="card-last-lesson-title">Vuelve donde lo dejaste</h3>
     <p class="card-last-lesson-subtitle">
       {{ lastLesson.trimester }}º Trimestre - Sesión {{ lastLesson.id }},
