@@ -55,7 +55,7 @@
     style="height: 84vh"
   >
     <div class="d-flex flex-column align-items-center pb-4">
-      <div style="width: 330px">
+      <div class="w-100" style="max-width: 330px; min-width: 230px;">
         <h5 class="mb-0" style="color: #adafb4; font-size: 14px">Idioma</h5>
         <p-dropdown
           [options]="languages"
@@ -68,7 +68,7 @@
     </div>
 
     <div class="d-flex flex-column align-items-center pt-2">
-      <div style="width: 330px">
+      <div class="w-100" style="max-width: 330px; min-width: 230px;">
         <h5 class="mb-0" style="color: #adafb4; font-size: 14px">Cursos</h5>
         <p-dropdown
           [options]="courses"
@@ -83,7 +83,7 @@
 
   <!-- footer -->
   <footer class="d-flex flex-column align-items-center justify-content-center footer">
-    <p-button label="Guardar cambios" (click)="saveConfig($event)" class="btn-save" style="width: 300px" styleClass="w-100 p-button-lg"></p-button>
+    <p-button label="Guardar cambios" (click)="saveConfig($event)" class="btn-save w-100" style="max-width: 300px; min-width: 200px;" styleClass="w-100 p-button-lg"></p-button>
 
     <div class="pt-4 btn-cancel" (click)="closeWithoutSave()">
       Cerrar sin guardar

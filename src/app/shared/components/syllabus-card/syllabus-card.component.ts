@@ -7,7 +7,7 @@ import { Session } from 'src/app/modules/main-module/models/session.interface';
   styleUrls: ['./syllabus-card.component.scss'],
 })
 export class SyllabusCardComponent implements OnInit {
-  @Input() sessionList: Session[];
+  @Input() session: Session;
   @Input() chartData: any;
 
   constructor() {}

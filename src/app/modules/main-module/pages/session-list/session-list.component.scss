@@ -1,0 +1,70 @@
+@import "colors";
+
+// Custom
+.font {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.session-list {
+  &__btn-back {
+    @extend .font;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  &__card-syllabus {
+    &-title {
+      @extend .font;
+    }
+    &-subtitle {
+      @extend .font;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &__listbox {
+    &-title {
+      @extend .font;
+    }
+
+    &-badge {
+      padding: 3px 10px;
+      width: 77.33px;
+      height: 34px;
+      background-color: #ed993f;
+      color: white;
+      border-radius: 5px;
+    }
+
+    &-item {
+      @extend .font;
+      font-weight: 400;
+    }
+  }
+}
+
+// Prime
+:host::ng-deep.p-listbox {
+  border: none;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+:host::ng-deep.p-listbox-list {
+  width: 673px;
+  height: 64vh;
+  overflow-y: auto;
+}
+
+:host::ng-deep.p-listbox .p-listbox-list .p-listbox-item {
+  padding: 0px;
+}
+
+:host::ng-deep.p-listbox .p-listbox-list .p-listbox-item.p-highlight {
+  background: none;
+}

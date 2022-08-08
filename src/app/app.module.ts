@@ -58,7 +58,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { MenuModule } from 'primeng/menu';
 import { SkeletonModule } from 'primeng/skeleton';
 import { TimelineModule } from 'primeng/timeline';
-import { ConfirmationService, FilterService } from 'primeng/api';
+import { ConfirmationService, FilterService, MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent, ConfigSidebarComponent],
@@ -165,6 +165,7 @@ import { ConfirmationService, FilterService } from 'primeng/api';
     FilterService,
     ConfirmationService,
     UserService,
+    MessageService
   ],
   bootstrap: [AppComponent],
 })

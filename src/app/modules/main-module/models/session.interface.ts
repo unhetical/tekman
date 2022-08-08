@@ -3,13 +3,11 @@ export interface Session {
   name: string;
   completed: boolean;
   lessons: Lesson[];
+  done?: number;
 }
 
-export interface SessionDto {
-  id: number;
-  name: string;
-  completed: boolean;
-  lessons: Lesson[];
+export interface SessionDto extends Session {
+  // Sólo añadir los campos a enviar sin extender.
 }
 
 export interface Lesson {
@@ -17,11 +15,9 @@ export interface Lesson {
   name: string;
   trimester: number;
   completed: boolean;
+  random: boolean;
 }
 
-export interface LessonDto {
-  id: number;
-  name: string;
-  trimester: number;
-  completed: boolean;
+export interface LessonDto extends Lesson {
+  // Sólo añadir los campos a enviar sin extender.
 }

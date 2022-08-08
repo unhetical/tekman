@@ -14,6 +14,16 @@ export class UserService {
   private API = environment.api_sessions;
   private USER = '/user';
 
+  // TODO: Haríamos uso de estados para guardar el usuario obteniendo los datos del token al loguear.
+  private user = {
+    id: 1,
+    name: 'Tester',
+    token: 'xxx',
+    language: 'es',
+    course: '3',
+    random: true,
+  };
+
   constructor(protected http: HttpClient) {}
 
   /**
@@ -21,14 +31,7 @@ export class UserService {
    * @returns Config
    */
   getUser(): Observable<User> {
-    return of({
-      id: 1,
-      name: 'Tester',
-      token: 'xxx',
-      language: 'es',
-      course: '3',
-    });
-
+    return of(this.user);
     // return this.http
     //   .get<Response>(this.GATEWAY + this.API + this.USER)
     //   .pipe(catchError((err) => throwError(err)));

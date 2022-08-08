@@ -1,7 +1,7 @@
-import { Session, LessonDto } from '../models/session.interface';
+import { Session, LessonDto, Lesson } from '../models/session.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, throwError } from 'rxjs';
+import { Observable, of, Subject, throwError } from 'rxjs';
 import { catchError, map, shareReplay } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Response } from 'src/app/core/interfaces/response.interface';
@@ -15,7 +15,7 @@ export class SessionService {
   private SESSIONS = '/sessions';
 
   private selectedSession$ = new Subject<Session>();
-  private selectedSession: any;
+  public selectedSession: any;
 
   constructor(protected http: HttpClient) {}
 
@@ -33,6 +33,15 @@ export class SessionService {
   getAllSessions(): Observable<Session[]> {
     return this.http.get<Response>('/assets/data.json').pipe(
       map(({ data }) => {
+        // Esta parte solo es necesaria para el mock, podría venir calculado en el completed en vez de ser boolean.
+        data.forEach((s: Session) => {
+          s['done'] = 0;
+          s.lessons.forEach((l: Lesson) => {
+            if (l.completed) {
+              s['done'] += 1;
+            }
+          });
+        });
         return data;
       }),
       catchError((err) => throwError(err)),
@@ -45,10 +54,18 @@ export class SessionService {
    * @param id number
    * @returns Session
    */
-  getSession(id: number): Observable<any> {
+  getSession(id: number): Observable<Session> {
     return this.http.get<Response>('/assets/data.json').pipe(
       map(({ data }) => {
-        return data.find((f) => f.id === id);
+        // Esta parte solo es necesaria para el mock, podría venir calculado en el completed en vez de ser boolean.
+        const session = data.find((f) => f.id === id);
+        session['done'] = 0;
+        session.lessons.forEach((l: Lesson) => {
+          if (l.completed) {
+            session['done'] += 1;
+          }
+        });
+        return session;
       }),
       catchError((err) => throwError(err)),
       shareReplay(1)
@@ -59,13 +76,22 @@ export class SessionService {
    * Get last lesson
    * @returns Lesson
    */
-  getLastLesson(): Observable<any> {
+  getLastLesson(filter?: {
+    sessionId: number;
+    lessonId: number;
+  }): Observable<any> {
     return this.http.get<Response>('/assets/data.json').pipe(
       map(({ data }) => {
-        return data.find((res) => res.id === 2 && res.lessons[0].id === 25);
+        // Esta parte solo es necesaria para el mock, podría venir calculado en el completed en vez de ser boolean.
+        let lesson: Lesson;
+        data.forEach((s: Session) => {
+          if (s.id === filter.sessionId) {
+            lesson = s.lessons.find((l) => l.id === filter.lessonId);
+          }
+        });
+        return lesson;
       }),
-      catchError((err) => throwError(err)),
-      shareReplay(1)
+      catchError((err) => throwError(err))
     );
   }
 
@@ -73,13 +99,14 @@ export class SessionService {
    * Edit lesson
    * @param lessonDto LessonDto
    */
-  updateLesson(lessonDto: LessonDto): Observable<LessonDto> {
-    return this.http
-      .put<LessonDto>(this.GATEWAY + this.API + this.SESSIONS, lessonDto)
-      .pipe(
-        catchError((err) => throwError(err)),
-        shareReplay(1)
-      );
+  updateLesson(lessonDto: LessonDto): Observable<LessonDto | boolean> {
+    return of(true);
+    // return this.http
+    //   .put<LessonDto>(this.GATEWAY + this.API + this.SESSIONS, lessonDto)
+    //   .pipe(
+    //     catchError((err) => throwError(err)),
+    //     shareReplay(1)
+    //   );
   }
 
   // OBSERVABLES

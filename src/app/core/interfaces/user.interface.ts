@@ -4,9 +4,11 @@ export interface User {
   token: string;
   language: string;
   course: string;
+  random: boolean;
 }
 
 export interface ConfigDto {
   language: string;
   course: string;
+  random: boolean;
 }

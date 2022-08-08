@@ -8,7 +8,7 @@ import { SessionListComponent } from './pages/session-list/session-list.componen
 const routes: Routes = [
   { path: 'home', component: MainModuleComponent },
   {
-    path: 'session-list',
+    path: 'session-list/:id',
     component: SessionListComponent,
   },
   {
@@ -19,6 +19,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MainModuleRoutingModule { }
+export class MainModuleRoutingModule {}

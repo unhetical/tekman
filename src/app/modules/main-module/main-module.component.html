@@ -7,12 +7,19 @@
     (nextLesson)="nextLesson($event)"
   ></app-last-lesson>
   <!-- Syllabus cards -->
-  <div class="pt-5">
-    <h3 class="syllabus-title">Temario</h3>
-    <app-syllabus-card
-      [sessionList]="sessionList"
-      [chartData]="chartData"
-    ></app-syllabus-card>
+  <div class="main-module__syllabus pt-5">
+    <h3 class="main-module__syllabus-title">Temario</h3>
+
+    <div class="d-flex pt-3 main-module__syllabus-card">
+      <p-card
+        *ngFor="let session of sessionList; let i = index"
+        class="pb-4 pr-4"
+        (click)="navigateToSessionList(sessionList[i].id)"
+      >
+        <app-syllabus-card [session]="session" [chartData]="chartData[i]">
+        </app-syllabus-card>
+      </p-card>
+    </div>
   </div>
 </div>
 
@@ -35,3 +42,5 @@
     ></p-button>
   </div>
 </p-sidebar>
+
+<p-toast></p-toast>
