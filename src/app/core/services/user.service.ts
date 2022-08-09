@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Options, Response } from '../interfaces/response.interface';
+import { Options } from '../interfaces/response.interface';
 import { ConfigDto, User } from '../interfaces/user.interface';
 
 @Injectable({
@@ -11,7 +10,7 @@ import { ConfigDto, User } from '../interfaces/user.interface';
 })
 export class UserService {
   private GATEWAY = environment.gateway;
-  private API = environment.api_sessions;
+  private API = environment.api_user;
   private USER = '/user';
 
   // TODO: Haríamos uso de estados para guardar el usuario obteniendo los datos del token al loguear.

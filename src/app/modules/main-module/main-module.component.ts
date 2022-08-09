@@ -46,7 +46,7 @@ export class MainModuleComponent implements OnInit {
   }
 
   getUser(): void {
-    this.userService.getUser().subscribe((res) => (this.user = res));
+    this.userService.getUser().pipe(take(1)).subscribe((res) => (this.user = res));
   }
 
   getLastLesson(): void {

@@ -64,7 +64,6 @@ export class NavigationComponent implements OnInit {
         // Sólo lo utilizo para actualizar el mock
         this.user.language = res.language;
         this.user.course = res.course;
-        console.log('saved', res);
         this.closeConfigModal();
       },
       (err) => console.warn(err)
